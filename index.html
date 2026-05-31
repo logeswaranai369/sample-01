@@ -1,97 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Tech Horizon Blog</title>
-    <style>
-        body {
-            font-family: Georgia, serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            background-color: #fdfdfd;
-            color: #222;
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#e0e3e5",
+              "on-error": "#ffffff",
+              "on-surface": "#191c1e",
+              "on-secondary-container": "#fefcff",
+              "surface-container": "#eceef0",
+              "on-background": "#191c1e",
+              "on-secondary-fixed": "#00174b",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e6e8ea",
+              "secondary-fixed": "#dbe1ff",
+              "surface-dim": "#d8dadc",
+              "outline-variant": "#c4c6cf",
+              "secondary-fixed-dim": "#b4c5ff",
+              "on-error-container": "#93000a",
+              "surface-container-low": "#f2f4f6",
+              "on-tertiary-container": "#75859d",
+              "tertiary-container": "#0b1c30",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#f7f9fb",
+              "secondary": "#0051d5",
+              "primary-fixed-dim": "#b1c7f2",
+              "outline": "#74777f",
+              "background": "#f7f9fb",
+              "surface-container-highest": "#e0e3e5",
+              "tertiary-fixed": "#d3e4fe",
+              "primary-container": "#001b3d",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#b7c8e1",
+              "inverse-primary": "#b1c7f2",
+              "on-primary-fixed": "#001b3d",
+              "on-primary-container": "#6f84ac",
+              "tertiary": "#000000",
+              "surface-tint": "#495f84",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#38485d",
+              "primary": "#000000",
+              "on-tertiary-fixed": "#0b1c30",
+              "on-primary-fixed-variant": "#31476b",
+              "secondary-container": "#316bf3",
+              "on-tertiary": "#ffffff",
+              "inverse-on-surface": "#eff1f3",
+              "on-secondary-fixed-variant": "#003ea8",
+              "on-surface-variant": "#44474e",
+              "error-container": "#ffdad6",
+              "surface-bright": "#f7f9fb",
+              "primary-fixed": "#d6e3ff",
+              "inverse-surface": "#2d3133"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        nav {
-            background-color: #fff;
-            border-bottom: 1px solid #eee;
-            padding: 15px 20px;
-            text-align: center;
+        .signature-gradient {
+            background: linear-gradient(135deg, #0051d5 0%, #316bf3 100%);
         }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #555;
-            font-family: sans-serif;
-            font-weight: 600;
+        .cloud-shadow {
+            box-shadow: 0 12px 40px rgba(0, 27, 61, 0.06);
         }
-        .main-container {
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .post-header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-        .post-meta {
-            font-family: sans-serif;
-            color: #777;
-            font-size: 0.9em;
-            margin-bottom: 30px;
-        }
-        .post-content p {
-            margin-bottom: 25px;
-            font-size: 1.15em;
-        }
-        .post-content h2 {
-            font-family: sans-serif;
-            margin-top: 40px;
-            color: #111;
-        }
-        footer {
-            margin-top: 60px;
-            border-top: 1px solid #eee;
-            padding: 30px 20px;
-            text-align: center;
-            font-family: sans-serif;
-            color: #888;
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
         }
     </style>
 </head>
-<body>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Articles</a>
-        <a href="#">About</a>
-        <a href="#">Subscribe</a>
-    </nav>
-
-    <div class="main-container">
-        <article>
-            <div class="post-header">
-                <h1>The Future of Web Development in the Age of AI</h1>
-                <div class="post-meta">Published on May 15, 2026 by Elena Rostova</div>
-            </div>
-            
-            <div class="post-content">
-                <p>The landscape of front-end development is undergoing a dramatic shift. With intelligent code companions evolving from simple autocomplete engines to context-aware architects, the workflow of an engineer is transforming rapidly.</p>
-                
-                <h2>Shifting from Syntax to Architecture</h2>
-                <p>We are moving away from spending hours debugging missing closing tags or fighting intricate layout misalignments. Instead, modern development values semantic structure, robust component patterns, and precise accessibility modeling above all else.</p>
-                
-                <h2>The Importance of Core HTML</h2>
-                <p>No matter how smart automation becomes, semantic HTML remains the bedrock of an accessible, performant, and discoverable web. Clean code structure ensures search crawlers and assistive technologies understand intent perfectly.</p>
-            </div>
-        </article>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 The Tech Horizon. Built with love and standard elements.</p>
-    </footer>
-
-</body>
-</html>
+<body class="bg-background font-body text-on-background antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(0,27,61,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black tracking-tighter text-[#001B3D] dark:text-slate-100">MIR CLOUD</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-blue-600 dark:text-blue-400 font-semibold cursor-pointer active:scale-95 transition-transform" href="#">Credits: $5,240.00</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-200 cursor-pointer active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-slate-500 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-200 cursor-pointer active:scale-95">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border-2 border-surface-container">
+<img alt="User profile avatar" data-alt="close-up professional portrait of a tech executive with soft studio lighting and a neutral blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEogIxCv_SPuiVyaJ7BGzMz4p1UNd91GKrlwO7sIInLowh6UYmwYMh-nyEKq4F6i7UdHjKsS2DwWWMQJ3HgKQSgLEimD5LZIJ4uGpOcJ6mSfFXxaGkix79D2n87V3ra2TbRNfXI-7At_GbEnKm2Xnw_v4Mfux-KD1wKdLt7z9YX-78OkqtTeeb7g0PBzWZMKDid2_9CMPYVdAsCIQ_XuSzxVnYrBUYqBfCpgCucSrBeIb6dUqZhYpHc0356LDRerEAcB4v7z4yQzuK"/>
+</div>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full absolute bottom-0 opacity-15"></div>
+</nav>
+<div class="flex min-h-screen pt-16">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-[#001B3D] dark:bg-slate-950 shadow-2xl z-40">
+<div class="flex flex-col h-full py-8 px-4 space-y-2">
+<div class="px-4 mb-8">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-xl signature-gradient flex items-center justify-center text-white font-bold">MC</div>
+<div>
+<h3 class="text-white font-bold tracking-tight">Profile Settings</h3>
+<p class="text-slate-400 text-xs">Manage your account preferences</p>
+</div>
+</div>
+</div>
+<nav class="flex-grow space-y-1">
+<a class="flex items-center gap-4 text-slate-400 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-sm font-medium tracking-wide">My Profile</span>
+</a>
+<!-- Active State: Languages -->
+<a class="flex items-center gap-4 bg-blue-600 text-white rounded-lg px-4 py-3 shadow-[0_0_15px_rgba(0,81,213,0.4)] active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="language" style="font-variation-settings: 'FILL' 1;">language</span>
+<span class="text-sm font-medium tracking-wide">Languages</span>
+</a>
+<a class="flex items-center gap-4 text-slate-400 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span class="text-sm font-medium tracking-wide">Change Password</span>
+</a>
+<a class="flex items-center gap-4 text-slate-400 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-sm font-medium tracking-wide">Payment Settings</span>
+</a>
+<a class="flex items-center gap-4 text-slate-400 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="api">api</span>
+<span class="text-sm font-medium tracking-wide">Request API Access</span>
+</a>
+<a class="flex items-center gap-4 text-slate-400 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="text-sm font-medium tracking-wide">Notification Settings</span>
+</a>
+<a class="flex items-center gap-4 text-slate-400 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="person_remove">person_remove</span>
+<span class="text-sm font-medium tracking-wide">Account Delete Request</span>
+</a>
+</nav>
+<div class="pt-8 border-t border-white/10 space-y-1">
+<a class="flex items-center gap-4 text-slate-400 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="support">support</span>
+<span class="text-sm font-medium tracking-wide">Help &amp; Support</span>
+</a>
+<a class="flex items-center gap-4 text-slate-400 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-sm font-medium tracking-wide">Log Out</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-72 flex-grow p-12 bg-surface min-h-screen">
+<header class="mb-12 max-w-4xl">
+<span class="text-[0.65rem] font-bold tracking-[0.2em] text-secondary uppercase mb-2 block">Preferences</span>
+<h1 class="text-4xl font-black text-on-surface tracking-tight mb-4">Language Settings</h1>
+<p class="text-on-surface-variant max-w-2xl leading-relaxed">
+                    Select your preferred interface language. This will adjust the labels, documentation, and system messages across the MIR CLOUD platform.
+                </p>
+</header>
+<!-- Language Selection Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl">
+<!-- English (Active) -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-6 cloud-shadow cursor-pointer transition-all duration-300 border-2 border-secondary ring-4 ring-secondary/5">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-8 rounded overflow-hidden shadow-sm">
+<img alt="Flag of United Kingdom" class="w-full h-full object-cover" data-alt="clean digital illustration of the Union Jack flag with crisp lines and vibrant colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjBzaZD3Z_Mh6Ff8RwBROdHshhDdfondph5jo_nMvSQ2TQ0jdHwcDsmPOXhhu6y5Eb12blAlHe20oI9CE6-37J5gAns23ZwXTHbv37L2zmj63Ns_Nq2xYwY_rJjzmpVu_Dm2ZzbOgd8fw5KI8BmBb8wN1H88eFgq9hUxwQRWv39Zr3iHPk_iCZjSSnc2MJAqzoAx5MMdPNmBZnIvpBLAsYaz-7lQ7vBk0NrWw-cVSs5312Tm_5D3ffODCz-PyNxb7PMPA3Y4u7hukb"/>
+</div>
+<div class="w-6 h-6 rounded-full signature-gradient flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">English</h3>
+<p class="text-sm text-on-surface-variant">Default System Language</p>
+</div>
+</div>
+<!-- Español -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-6 cloud-shadow cursor-pointer hover:bg-surface-container-low transition-all duration-300 border-2 border-transparent">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-8 rounded overflow-hidden shadow-sm">
+<img alt="Flag of Spain" class="w-full h-full object-cover" data-alt="clean digital illustration of the Spanish flag with vibrant yellow and red stripes and detailed crest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0xFcpQzGgdXeTNoMGb57ZPwR-H0Bem-D22CQvNu1P_Cgg3UGKwrYId2DnTCYJWgChiWFSFyepTa3rGw16Ny5nohh4aR6b69wau6NMG9T8o9Sx0ZKHzp8N3yB0eQquV7jbabymjONsVcziU0nxMItlpz24wSMwlveqoLi1g1BZkjk1GW9NuhDFWb3XdpTTGoXx87naLneVk7qfzZTmH5sSkoGysa3BGZol9x8Q6Bh9acw5g9qsiULD2toQA3cyCmM7p0nWesX3NEHY"/>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Español</h3>
+<p class="text-sm text-on-surface-variant">Spanish</p>
+</div>
+</div>
+<!-- Português -->
+<div class="group relative bg-surface-container-lowest rounded-xl p-6 cloud-shadow cursor-pointer hover:bg-surface-container-low transition-all duration-300 border-2 border-transparent">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-8 rounded overflow-hidden shadow-sm">
+<img alt="Flag of Portugal" class="w-full h-full object-cover" data-alt="clean digital illustration of the Portuguese flag with deep green and red panels and golden shield" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm4tWzlOQiLR5fSxKdMDz2o2jJxhsy_Rz9cVJyBFm3ExeH8Tc7rbfxDWjuV63AEl2uOui0FcNzcTFFUZB-K7PiFshSsYAg8HIp42SN0QLjUv8SDI2AF27hqDfrbnhvykFw0EQ0g4L2VvNEjRK8B0JOP_IT-Hi5fcGmCg5LmqHKTEWYvAIuhuOJUOjR4T16nTrjdsCw5pTjWlswzlqb59Yxh30Y9hdS2Ue8e4u9CdRDvKcoB5avVTz5MzJnK4hsdxoT9BYs8SuPAAj2"/>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Português</h3>
+<p class="text-sm text-on-surface-variant">Portuguese</p>
+</div>
+</div>
+<!-- Future Expansion Placeholder -->
+<div class="group relative border-2 border-dashed border-outline-variant/30 rounded-xl p-6 flex flex-col items-center justify-center text-center opacity-60 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-outline mb-4" data-icon="add_circle">add_circle</span>
+<h3 class="text-sm font-semibold text-on-surface">More coming soon</h3>
+<p class="text-xs text-on-surface-variant mt-1">Request a translation</p>
+</div>
+</div>
+<!-- Visual Context Section (Editorial Style) -->
+<section class="mt-24 grid grid-cols-12 gap-8 max-w-5xl">
+<div class="col-span-12 lg:col-span-5 relative">
+<div class="aspect-square rounded-full overflow-hidden cloud-shadow relative z-10">
+<img alt="Global connectivity" class="w-full h-full object-cover" data-alt="abstract 3d render of a glowing digital globe with interconnected data lines in deep navy and electric blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCg5anG99b3WN6Zrt-nGU-WiAXwteYWo5wpk-_bI1wjORdej6KfQoDVgGuaDzuO4vizg6tyg72CaPZaUcrjFMSZkXgCCE-cGbSEErw11U0L4DHxfW4xyB0aCg3JR4btTAsI_5Tw092aTHX6nFiHfrlerpg-h1heq7n_yRdBJ9Yhvtu19rERzRbGPb4-GZhjZfjsililWmaXG8Se4eEP2RxLAT7o_u-G42pFozm-DI3Ot_dgDufsQxfydjC0ukI4tV9TT0Yfx3rz_aZ"/>
+</div>
+<div class="absolute -top-4 -right-4 w-32 h-32 signature-gradient rounded-full blur-3xl opacity-20"></div>
+</div>
+<div class="col-span-12 lg:col-span-7 flex flex-col justify-center">
+<h2 class="text-2xl font-bold text-on-surface mb-6 tracking-tight">Global Infrastructure, Local Experience.</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="translate">translate</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Auto-Translation</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Our AI-driven API docs automatically sync with your selected language for seamless integration.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="update">update</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Regional Compliance</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Language settings adjust legal disclosures and data sovereignty notifications based on local laws.</p>
+</div>
+</div>
+</div>
+<div class="mt-10">
+<button class="signature-gradient text-white px-8 py-4 rounded-xl font-bold tracking-tight shadow-lg shadow-secondary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                            Save Preferences
+                        </button>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>
